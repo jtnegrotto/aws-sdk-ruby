@@ -3078,6 +3078,10 @@
       "type":"structure",
       "required":["GroupId"],
       "members":{
+        "Description":{
+          "shape":"String",
+          "locationName":"description"
+        },
         "DryRun":{
           "shape":"Boolean",
           "locationName":"dryRun"
@@ -3120,6 +3124,7 @@
       "type":"structure",
       "members":{
         "CidrIp":{"shape":"String"},
+        "Description":{"shape":"String"},
         "FromPort":{"shape":"Integer"},
         "GroupId":{"shape":"String"},
         "GroupName":{"shape":"String"},

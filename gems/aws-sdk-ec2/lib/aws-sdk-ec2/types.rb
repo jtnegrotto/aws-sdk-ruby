@@ -1105,6 +1105,7 @@ module Aws::EC2
     #   data as a hash:
     #
     #       {
+    #         description: "String",
     #         dry_run: false,
     #         group_id: "String", # required
     #         ip_permissions: [
@@ -1150,6 +1151,9 @@ module Aws::EC2
     #         source_security_group_name: "String",
     #         source_security_group_owner_id: "String",
     #       }
+    #
+    # @!attribute [rw] description
+    #   @return [String]
     #
     # @!attribute [rw] dry_run
     #   Checks whether you have the required permissions for the action,
@@ -1198,6 +1202,7 @@ module Aws::EC2
     # @see http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AuthorizeSecurityGroupEgressRequest AWS API Documentation
     #
     class AuthorizeSecurityGroupEgressRequest < Struct.new(
+      :description,
       :dry_run,
       :group_id,
       :ip_permissions,
@@ -1217,6 +1222,7 @@ module Aws::EC2
     #
     #       {
     #         cidr_ip: "String",
+    #         description: "String",
     #         from_port: 1,
     #         group_id: "String",
     #         group_name: "String",
@@ -1266,6 +1272,9 @@ module Aws::EC2
     # @!attribute [rw] cidr_ip
     #   The CIDR IPv4 address range. You can't specify this parameter when
     #   specifying a source security group.
+    #   @return [String]
+    #
+    # @!attribute [rw] description
     #   @return [String]
     #
     # @!attribute [rw] from_port
@@ -1346,6 +1355,7 @@ module Aws::EC2
     #
     class AuthorizeSecurityGroupIngressRequest < Struct.new(
       :cidr_ip,
+      :description,
       :from_port,
       :group_id,
       :group_name,

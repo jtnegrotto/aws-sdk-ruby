@@ -1339,6 +1339,7 @@ module Aws::EC2
     AttributeValue.add_member(:value, Shapes::ShapeRef.new(shape: String, location_name: "value"))
     AttributeValue.struct_class = Types::AttributeValue
 
+    AuthorizeSecurityGroupEgressRequest.add_member(:description, Shapes::ShapeRef.new(shape: String, location_name: "description"))
     AuthorizeSecurityGroupEgressRequest.add_member(:dry_run, Shapes::ShapeRef.new(shape: Boolean, location_name: "dryRun"))
     AuthorizeSecurityGroupEgressRequest.add_member(:group_id, Shapes::ShapeRef.new(shape: String, required: true, location_name: "groupId"))
     AuthorizeSecurityGroupEgressRequest.add_member(:ip_permissions, Shapes::ShapeRef.new(shape: IpPermissionList, location_name: "ipPermissions"))
@@ -1351,6 +1352,7 @@ module Aws::EC2
     AuthorizeSecurityGroupEgressRequest.struct_class = Types::AuthorizeSecurityGroupEgressRequest
 
     AuthorizeSecurityGroupIngressRequest.add_member(:cidr_ip, Shapes::ShapeRef.new(shape: String, location_name: "CidrIp"))
+    AuthorizeSecurityGroupIngressRequest.add_member(:description, Shapes::ShapeRef.new(shape: String, location_name: "Description"))
     AuthorizeSecurityGroupIngressRequest.add_member(:from_port, Shapes::ShapeRef.new(shape: Integer, location_name: "FromPort"))
     AuthorizeSecurityGroupIngressRequest.add_member(:group_id, Shapes::ShapeRef.new(shape: String, location_name: "GroupId"))
     AuthorizeSecurityGroupIngressRequest.add_member(:group_name, Shapes::ShapeRef.new(shape: String, location_name: "GroupName"))

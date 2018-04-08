@@ -209,6 +209,7 @@ module Aws::EC2
     # @example Request syntax with placeholder values
     #
     #   security_group.authorize_egress({
+    #     description: "String",
     #     dry_run: false,
     #     ip_permissions: [
     #       {
@@ -254,6 +255,7 @@ module Aws::EC2
     #     source_security_group_owner_id: "String",
     #   })
     # @param [Hash] options ({})
+    # @option options [String] :description
     # @option options [Boolean] :dry_run
     #   Checks whether you have the required permissions for the action,
     #   without actually making the request, and provides an error response.
@@ -289,6 +291,7 @@ module Aws::EC2
     #
     #   security_group.authorize_ingress({
     #     cidr_ip: "String",
+    #     description: "String",
     #     from_port: 1,
     #     group_name: "String",
     #     ip_permissions: [
@@ -337,6 +340,7 @@ module Aws::EC2
     # @option options [String] :cidr_ip
     #   The CIDR IPv4 address range. You can't specify this parameter when
     #   specifying a source security group.
+    # @option options [String] :description
     # @option options [Integer] :from_port
     #   The start of port range for the TCP and UDP protocols, or an
     #   ICMP/ICMPv6 type number. For the ICMP/ICMPv6 type number, use `-1` to

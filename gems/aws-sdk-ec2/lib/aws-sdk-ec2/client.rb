@@ -1358,6 +1358,8 @@ module Aws::EC2
     # [1]: http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_SecurityGroups.html
     # [2]: http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Appendix_Limits.html
     #
+    # @option params [String] :description
+    #
     # @option params [Boolean] :dry_run
     #   Checks whether you have the required permissions for the action,
     #   without actually making the request, and provides an error response.
@@ -1398,6 +1400,7 @@ module Aws::EC2
     # @example Request syntax with placeholder values
     #
     #   resp = client.authorize_security_group_egress({
+    #     description: "String",
     #     dry_run: false,
     #     group_id: "String", # required
     #     ip_permissions: [
@@ -1482,6 +1485,8 @@ module Aws::EC2
     #   The CIDR IPv4 address range. You can't specify this parameter when
     #   specifying a source security group.
     #
+    # @option params [String] :description
+    #
     # @option params [Integer] :from_port
     #   The start of port range for the TCP and UDP protocols, or an
     #   ICMP/ICMPv6 type number. For the ICMP/ICMPv6 type number, use `-1` to
@@ -1551,6 +1556,7 @@ module Aws::EC2
     #
     #   resp = client.authorize_security_group_ingress({
     #     cidr_ip: "String",
+    #     description: "String",
     #     from_port: 1,
     #     group_id: "String",
     #     group_name: "String",
